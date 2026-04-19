@@ -1,0 +1,20 @@
+# VS Code Workspace Settings
+.vscode/
+
+# Python Cache Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment Libraries
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter Notebook Hidden Files (If used for analysis)
+.ipynb_checkpoints
+
+# OS Hidden Files
+.DS_Store
+Thumbs.db
