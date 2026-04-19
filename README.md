@@ -52,7 +52,7 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 * Delivery times (Did the package arrive late?)
 * Customer support ticket history
 * Packaging damage reports at delivery
-* Exact reason for return (fit, defective, changed mind)
+* Exact reason for return (defective, compatibility issues, damaged, changed mind)
 
 ## 🛠️ Technologies Used
 * **Language:** Python
@@ -65,7 +65,7 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Fylgja0/ECommerce_Global_Sales.git
+   git clone https://github.com/Fylgja0/ecommerce-return-prediction.git
    ```
 
 2. Install the required dependencies:
