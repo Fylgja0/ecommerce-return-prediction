@@ -75,7 +75,7 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 
 3. Run the optimized Random Forest script:
     ```bash
-    python RandomForest.py
+    python Model/RandomForest.py
     ```
 
 ## 👨‍💻 Author
