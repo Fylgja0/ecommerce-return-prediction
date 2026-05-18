@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 
@@ -65,7 +65,9 @@ balanced_model.fit(X_train_smote, y_train_smote)
 y_pred_balanced = balanced_model.predict(X_test)
 
 print(f"\nRandom Forest Accuracy (After SMOTE): {accuracy_score(y_test, y_pred_balanced):.4f}\n")
-print("Classification Report (SMOTE Balanced):")
+print("Confusion Matrix (SMOTE Balanced):")
+print(confusion_matrix(y_test, y_pred_balanced, labels=le.transform(le.classes_)))
+print("\nClassification Report (SMOTE Balanced):")
 print(classification_report(y_test, y_pred_balanced, target_names=le.classes_))
 
 # =====================================================================
@@ -93,5 +95,7 @@ optimized_model.fit(X_train_optimized, y_train_smote)
 y_pred_optimized = optimized_model.predict(X_test_optimized)
 
 print(f"Optimized Model Accuracy (Noise Reduced): {accuracy_score(y_test, y_pred_optimized):.4f}\n")
-print("Classification Report (Optimized Model):")
+print("\nConfusion Matrix (Optimized Model):")
+print(confusion_matrix(y_test, y_pred_optimized, labels=le.transform(le.classes_)))
+print("\nClassification Report (Optimized Model):")
 print(classification_report(y_test, y_pred_optimized, target_names=le.classes_))
