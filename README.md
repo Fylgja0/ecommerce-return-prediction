@@ -70,7 +70,7 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 * **Imbalanced Data Handling:** Imbalanced-learn (SMOTE)
 
 ## ⚙️ How to Run the Project
-*(Note: Only the final, optimized Random Forest model is provided in this repository to ensure a clean execution flow.)*
+*(Note: Only the final, optimized Random Forest and advanced Catboost models are provided in this repository to ensure a clean execution flow.)*
 
 1. Clone the repository:
    ```bash
