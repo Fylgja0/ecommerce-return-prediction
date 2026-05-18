@@ -37,15 +37,23 @@ Using Random Forest's `feature_importances_`, I analyzed the signal-to-noise rat
 
 Training the model exclusively on these high-quality features successfully broke the paradox. The model finally started attempting to predict true returns and exchanges.
 
+### Phase 4: Advanced Boosting with CatBoost (The Paradigm Shift)
+To optimize the pipeline further and completely bypass the manual encoding/dimensionality reduction dilemma, I integrated a **CatBoost Classifier**. 
+* **Native Categorical Handling:** CatBoost processes high-cardinality categorical variables directly without creating sparse matrices or exploding the feature space.
+* **Automated Class Balancing:** Utilized `auto_class_weights='Balanced'` to handle the severe data skew dynamically during training.
+* **GPU Acceleration:** Leveraged GPU task types to significantly accelerate training iterations on the entire feature set while using early stopping to eliminate overfitting.
+
 ## 📈 Key Results
 * **Naive Model Accuracy:** 86% *(Fake performance; 0% Minority Recall)*
 * **Optimized Concentrated Model Accuracy:** 78% *(Real performance; Successfully predicting minority behaviors)*
-* **Macro F1-Score Improvement:** Increased from 0.31 to 0.34.
+* **CatBoost Performance:** Outperformed traditional sparse-matrix pipelines by processing raw high-cardinality data directly with optimized multi-class loss tracking.
 
 ## 💡 Ultimate Business Insights (The "So What?")
-The most valuable outcome of this analytical process is not a perfect model, but a critical business insight. 
+The most valuable outcome of this analytical process is not just a predictive model, but a critical business insight. 
 
-Despite applying state-of-the-art optimization techniques (SMOTE, Feature Importance, Class Balancing), the model's ability to confidently isolate returns remained limited. **Mathematical Conclusion:** *The current features collected by the company (Customer Age, Item Price, Rating) do not contain a strong enough signal to explain return behavior.*
+Despite applying state-of-the-art optimization techniques (SMOTE, Feature Importance, Native CatBoost Balancing), the model's ability to confidently isolate returns remains limited by the nature of the data.
+
+**Mathematical Conclusion:** *The current features collected by the company (Customer Age, Item Price, Rating) do not contain a strong enough signal to explain return behavior on their own.*
 
 **Recommendations for the Business:**
 To build a highly accurate predictive engine, the company must begin tracking new data points such as:
@@ -57,6 +65,7 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 ## 🛠️ Technologies Used
 * **Language:** Python
 * **Data Manipulation:** Pandas
+* **Gradient Boosting:** CatBoost
 * **Machine Learning:** Scikit-Learn (Random Forest, Logistic Regression, Decision Tree)
 * **Imbalanced Data Handling:** Imbalanced-learn (SMOTE)
 
@@ -76,6 +85,11 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 3. Run the optimized Random Forest script:
     ```bash
     python Model/RandomForest.py
+    ```
+
+4. Run the advanced Catboost script:
+    ```
+    python Model/Catboost.py
     ```
 
 ## 👨‍💻 Author
