@@ -38,7 +38,7 @@ cb_model = CatBoostClassifier(
     verbose=100                          # Print training progress every 100 iterations
 )
 
-# Fit the model with early stopping to prevent overfitting
+# Fit the model
 cb_model.fit(X_train, y_train)
 
 # 5. Estimation and Evaluation
