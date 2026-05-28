@@ -68,6 +68,7 @@ To build a highly accurate predictive engine, the company must begin tracking ne
 * **Gradient Boosting:** CatBoost
 * **Machine Learning:** Scikit-Learn (Random Forest, Logistic Regression, Decision Tree)
 * **Imbalanced Data Handling:** Imbalanced-learn (SMOTE)
+* **Business Intelligence & Data Visualization:** Microsoft Excel (Interactive Dashboard, Pivot Tables & Dynamic Slicers)
 
 ## ⚙️ How to Run the Project
 *(Note: Only the final, optimized Random Forest and advanced Catboost models are provided in this repository to ensure a clean execution flow.)*
@@ -91,6 +92,9 @@ To build a highly accurate predictive engine, the company must begin tracking ne
     ```
     python Model/Catboost.py
     ```
+
+5. Explore the Interactive Business Dashboard:
+    Open `ecommerce_sales_dashboard.xlsx` in Microsoft Excel to explore the interactive management panel. Use the slicers on the left panel (`Region`, `Payment Method`, `Sales Channel`, `Customer Age Group`) to filter the entire sales and return metrics dynamically.
 
 ## 👨‍💻 Author
 **Ahmetcan Bağlı**
