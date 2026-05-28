@@ -98,8 +98,9 @@ To build a highly accurate predictive engine, the company must begin tracking ne
     python Model/Catboost.py
     ```
 
-5. Explore the Interactive Business Dashboard:
-    Open `ecommerce_sales_dashboard.xlsx` in Microsoft Excel to explore the interactive management panel. Use the slicers on the left panel (`Region`, `Payment Method`, `Sales Channel`, `Customer Age Group`) to filter the entire sales and return metrics dynamically.
+5. Explore the Interactive Business Dashboard: <br>
+   Open `ecommerce_sales_dashboard.xlsx` in Microsoft Excel to explore the interactive management panel. <br>
+   Use the slicers on the left panel (`Region`, `Payment Method`, `Sales Channel`, `Customer Age Group`) to filter the entire sales and return metrics dynamically.
 
 ## 👨‍💻 Author
 **Ahmetcan Bağlı**
