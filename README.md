@@ -43,6 +43,11 @@ To optimize the pipeline further and completely bypass the manual encoding/dimen
 * **Automated Class Balancing:** Utilized `auto_class_weights='Balanced'` to handle the severe data skew dynamically during training.
 * **GPU Acceleration:** Leveraged GPU task types to significantly accelerate training iterations on the entire feature set while using early stopping to eliminate overfitting.
 
+### Phase 5: Business Intelligence & Executive Dashboard Delivery
+To translate complex machine learning metrics and historical data into actionable executive decisions, I engineered a fully interactive sales and return dashboard within Excel. 
+* **Dynamic Slicing:** Structured dynamic report connections across cross-functional pivot tables, enabling real-time drill-downs by Region, Channel, Age Group, and Payment Methods.
+* **Imputation Insight Visualization:** Specially formatted 100% stacked column chart to cleanly isolate and analyze return distributions without allowing the median data imputation spike (at rating 37) to distort global scales.
+
 ## 📈 Key Results
 * **Naive Model Accuracy:** 86% *(Fake performance; 0% Minority Recall)*
 * **Optimized Concentrated Model Accuracy:** 78% *(Real performance; Successfully predicting minority behaviors)*
